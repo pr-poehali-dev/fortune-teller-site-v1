@@ -175,8 +175,8 @@ export default function Index() {
             </div>
             <div className="animate-scale-in">
               <img 
-                src="https://cdn.poehali.dev/projects/0223413f-c7f8-42b6-a6fb-56302d762d3e/files/8782d11d-28da-4bbe-bca9-626e0ece679b.jpg" 
-                alt="Мистическая гадалка" 
+                src="https://cdn.poehali.dev/files/Изображение WhatsApp 2025-04-16 в 09.00.21_08985347.jpg" 
+                alt="Валентина - профессиональная гадалка" 
                 className="rounded-2xl shadow-2xl glow-effect"
               />
             </div>
