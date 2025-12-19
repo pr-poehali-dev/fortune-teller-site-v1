@@ -132,7 +132,7 @@ export default function Index() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Icon name="Sparkles" size={32} className="text-primary" />
-              <span className="text-2xl font-bold text-primary">Мария Таро</span>
+              <span className="text-2xl font-bold text-primary">Валентина</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
               <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
