@@ -17,51 +17,31 @@ import {
 const services = [
   {
     id: 1,
-    title: 'Таро, Ленорман, русские руны, славянские кощуны',
-    description: 'Раскладка на картах Таро, Ленорман, русских рунах и славянских кощунах для понимания текущей ситуации и будущих возможностей',
+    title: 'Таро, Ленорман (индивидуальный расклад)',
+    description: 'Раскладка на картах Таро и Ленорман для понимания текущей ситуации и будущих возможностей',
     icon: 'Sparkles',
-    price: '3000₽',
-    duration: '60 минут'
+    price: 'от 1500₽'
   },
   {
     id: 2,
-    title: 'Работа с древними энергиями',
-    description: 'Подключение к мощным древним энергиям для решения жизненных задач и исполнения желаний',
-    icon: 'Flame',
-    price: '4000₽',
-    duration: '90 минут'
+    title: 'Заряженные ставы',
+    description: 'Индивидуальные рунические ставы с мощной зарядкой под вашу конкретную ситуацию',
+    icon: 'Wand2',
+    price: 'от 2000₽'
   },
   {
     id: 3,
-    title: 'Заряженные ставы на заказ',
-    description: 'Индивидуальные рунические ставы с мощной зарядкой под вашу конкретную ситуацию',
-    icon: 'Wand2',
-    price: '5000₽',
-    duration: '120 минут'
+    title: 'Работа с древними энергиями',
+    description: 'Подключение к мощным древним энергиям для решения жизненных задач и исполнения желаний',
+    icon: 'Flame',
+    price: 'от 10000₽'
   },
   {
     id: 4,
     title: 'Индивидуальный заказ амулетов',
     description: 'Создание персональных защитных и притягивающих амулетов по вашему запросу',
     icon: 'Shield',
-    price: '6000₽',
-    duration: 'Изготовление 3-7 дней'
-  },
-  {
-    id: 5,
-    title: 'Руны',
-    description: 'Древняя магия рунических символов для ответов на важные вопросы',
-    icon: 'BookOpen',
-    price: '2800₽',
-    duration: '60 минут'
-  },
-  {
-    id: 6,
-    title: 'Медитация',
-    description: 'Духовные практики и энергетическая очистка, работа с чакрами',
-    icon: 'Moon',
-    price: '3500₽',
-    duration: '75 минут'
+    price: 'от 6000₽'
   }
 ];
 
@@ -74,15 +54,51 @@ const testimonials = [
   },
   {
     name: 'Дмитрий К.',
-    text: 'Профессиональный подход, глубокое понимание. Помогла разобраться в сложной ситуации.',
+    text: 'Заказывал руническую ставу на привлечение достатка. Результат превзошёл все ожидания! Через неделю получил неожиданную премию.',
     rating: 5,
-    service: 'Астрология'
+    service: 'Заряженные ставы'
   },
   {
     name: 'Анна С.',
-    text: 'Приходила со скептицизмом, ушла с ясным пониманием своего пути. Рекомендую!',
+    text: 'Приходила со скептицизмом, ушла с ясным пониманием своего пути. Расклад на Ленорман открыл глаза на многое!',
     rating: 5,
-    service: 'Хиромантия'
+    service: 'Ленорман'
+  },
+  {
+    name: 'Ольга В.',
+    text: 'Работа с древними энергиями изменила мою жизнь! Наконец-то нашла своё предназначение и обрела внутренний покой.',
+    rating: 5,
+    service: 'Древние энергии'
+  },
+  {
+    name: 'Сергей Л.',
+    text: 'Амулет на защиту работает! Чувствую себя уверенно, негатив больше не цепляется. Спасибо огромное!',
+    rating: 5,
+    service: 'Амулеты'
+  },
+  {
+    name: 'Мария П.',
+    text: 'Обратилась с вопросом о личной жизни. Расклад показал точную картину, все советы помогли! Сейчас всё наладилось.',
+    rating: 5,
+    service: 'Таро'
+  },
+  {
+    name: 'Игорь Н.',
+    text: 'Скептически относился к эзотерике, но руническая става на удачу в бизнесе реально сработала. Контракт подписали!',
+    rating: 5,
+    service: 'Заряженные ставы'
+  },
+  {
+    name: 'Татьяна Г.',
+    text: 'Валентина — настоящий профессионал! Чувствуется глубокое знание и мощная энергетика. Всем рекомендую!',
+    rating: 5,
+    service: 'Работа с энергиями'
+  },
+  {
+    name: 'Виктор Р.',
+    text: 'Заказал амулет на привлечение любви. Через месяц встретил свою половинку. Совпадение? Не думаю!',
+    rating: 5,
+    service: 'Амулеты'
   }
 ];
 
@@ -211,12 +227,8 @@ export default function Index() {
                   <CardDescription className="text-base">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge variant="secondary" className="text-sm">
-                      <Icon name="Clock" size={14} className="mr-1" />
-                      {service.duration}
-                    </Badge>
-                    <span className="text-2xl font-bold text-accent">{service.price}</span>
+                  <div className="mb-4">
+                    <span className="text-3xl font-bold text-accent">{service.price}</span>
                   </div>
                   <Button className="w-full">Записаться</Button>
                 </CardContent>
@@ -232,7 +244,7 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
             <p className="text-xl text-muted-foreground">Что говорят люди, обратившиеся за помощью</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="animate-scale-in" style={{animationDelay: `${index * 150}ms`}}>
                 <CardHeader>
