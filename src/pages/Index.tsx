@@ -17,41 +17,41 @@ import {
 const services = [
   {
     id: 1,
-    title: 'Таро',
-    description: 'Раскладка на картах Таро для понимания текущей ситуации и будущих возможностей',
+    title: 'Таро, Ленорман, русские руны, славянские кощуны',
+    description: 'Раскладка на картах Таро, Ленорман, русских рунах и славянских кощунах для понимания текущей ситуации и будущих возможностей',
     icon: 'Sparkles',
     price: '3000₽',
     duration: '60 минут'
   },
   {
     id: 2,
-    title: 'Хиромантия',
-    description: 'Чтение линий судьбы на ладонях, раскрытие предназначения и жизненного пути',
-    icon: 'Hand',
-    price: '2500₽',
-    duration: '45 минут'
-  },
-  {
-    id: 3,
-    title: 'Астрология',
-    description: 'Персональный гороскоп, совместимость партнёров, прогноз на год',
-    icon: 'Stars',
+    title: 'Работа с древними энергиями',
+    description: 'Подключение к мощным древним энергиям для решения жизненных задач и исполнения желаний',
+    icon: 'Flame',
     price: '4000₽',
     duration: '90 минут'
   },
   {
+    id: 3,
+    title: 'Заряженные ставы на заказ',
+    description: 'Индивидуальные рунические ставы с мощной зарядкой под вашу конкретную ситуацию',
+    icon: 'Wand2',
+    price: '5000₽',
+    duration: '120 минут'
+  },
+  {
     id: 4,
-    title: 'Нумерология',
-    description: 'Анализ чисел судьбы, расчет благоприятных дат и периодов',
-    icon: 'Calculator',
-    price: '2000₽',
-    duration: '45 минут'
+    title: 'Индивидуальный заказ амулетов',
+    description: 'Создание персональных защитных и притягивающих амулетов по вашему запросу',
+    icon: 'Shield',
+    price: '6000₽',
+    duration: 'Изготовление 3-7 дней'
   },
   {
     id: 5,
     title: 'Руны',
     description: 'Древняя магия рунических символов для ответов на важные вопросы',
-    icon: 'Wand2',
+    icon: 'BookOpen',
     price: '2800₽',
     duration: '60 минут'
   },
@@ -159,9 +159,19 @@ export default function Index() {
                 Раскройте тайны своей судьбы
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Профессиональная гадалка с 15-летним опытом. Таро, астрология, хиромантия. 
+                Профессиональная гадалка с 15-летним опытом. Таро, Ленорман, русские руны, славянские кощуны. 
                 Помогу найти ответы на важные вопросы и увидеть ваш истинный путь.
               </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Badge variant="default" className="text-lg px-4 py-2 glow-effect">
+                  <Icon name="CheckCircle" size={20} className="mr-2" />
+                  100% гарантия
+                </Badge>
+                <Badge variant="secondary" className="text-lg px-4 py-2">
+                  <Icon name="Wallet" size={20} className="mr-2" />
+                  100% предоплата
+                </Badge>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-lg glow-effect">
                   <Icon name="Video" size={20} className="mr-2" />
@@ -397,36 +407,69 @@ export default function Index() {
 
       <section id="contacts" className="relative z-10 py-20 bg-card/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Контакты</h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="space-y-2">
-                <Icon name="Phone" size={32} className="mx-auto text-primary mb-2" />
-                <h3 className="text-xl font-semibold">Телефон</h3>
-                <p className="text-muted-foreground">+7 (999) 123-45-67</p>
-              </div>
-              <div className="space-y-2">
-                <Icon name="Mail" size={32} className="mx-auto text-primary mb-2" />
-                <h3 className="text-xl font-semibold">Email</h3>
-                <p className="text-muted-foreground">maria@tarot.ru</p>
-              </div>
-              <div className="space-y-2">
-                <Icon name="MapPin" size={32} className="mx-auto text-primary mb-2" />
-                <h3 className="text-xl font-semibold">Адрес</h3>
-                <p className="text-muted-foreground">Москва, ул. Мистическая, 13</p>
-              </div>
-            </div>
-            <div className="flex justify-center gap-6">
-              <Button variant="outline" size="icon" className="rounded-full w-12 h-12">
-                <Icon name="Instagram" size={24} />
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full w-12 h-12">
-                <Icon name="Send" size={24} />
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full w-12 h-12">
-                <Icon name="Youtube" size={24} />
-              </Button>
-            </div>
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Контакты</h2>
+            <p className="text-xl text-muted-foreground">Свяжитесь со мной удобным способом</p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-primary/20">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <Icon name="Phone" size={24} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
+                        <a href="https://wa.me/79963068545" className="text-primary hover:underline text-lg">
+                          +7 (996) 306-85-45
+                        </a>
+                        <p className="text-sm text-muted-foreground mt-1">Быстрая связь через мессенджер</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <Icon name="MessageCircle" size={24} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">Telegram</h3>
+                        <a href="https://t.me/ipgarmonia" className="text-primary hover:underline text-lg">
+                          @ipgarmonia
+                        </a>
+                        <p className="text-sm text-muted-foreground mt-1">Пишите в любое время</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-6">
+                    <div className="p-6 bg-primary/10 rounded-lg border border-primary/20">
+                      <h3 className="font-semibold text-xl mb-4 flex items-center gap-2">
+                        <Icon name="Info" size={24} className="text-primary" />
+                        Важная информация
+                      </h3>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <Icon name="CheckCircle" size={20} className="text-primary" />
+                          <span className="font-semibold">100% гарантия результата</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Icon name="Wallet" size={20} className="text-primary" />
+                          <span className="font-semibold">100% предоплата</span>
+                        </div>
+                      </div>
+                    </div>
+                    <Button className="w-full text-lg glow-effect" size="lg" asChild>
+                      <a href="https://wa.me/79963068545">
+                        <Icon name="Phone" size={20} className="mr-2" />
+                        Написать в WhatsApp
+                      </a>
+                    </Button>
+                    <Button variant="outline" className="w-full text-lg" size="lg" asChild>
+                      <a href="https://t.me/ipgarmonia">
+                        <Icon name="MessageCircle" size={20} className="mr-2" />
+                        Написать в Telegram
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
