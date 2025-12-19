@@ -6,6 +6,7 @@ import ServicesSection from '@/components/sections/ServicesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import BookingSection from '@/components/sections/BookingSection';
 import ContactsSection from '@/components/sections/ContactsSection';
+import MobileMenu from '@/components/MobileMenu';
 
 const blogPosts = [
   {
@@ -47,9 +48,10 @@ export default function Index() {
               <a href="#blog" className="hover:text-primary transition-colors">Блог</a>
               <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button className="glow-effect">
+            <Button className="glow-effect hidden md:inline-flex">
               Записаться
             </Button>
+            <MobileMenu />
           </div>
         </nav>
       </header>
